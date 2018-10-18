@@ -1,7 +1,11 @@
 .topbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
+    @media #{$tablet} {
+        justify-content: space-between;   
+    }
+    
     .topbar__logocontainer {
         display: flex;
         align-items: center;
