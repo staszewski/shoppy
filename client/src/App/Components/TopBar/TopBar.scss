@@ -1,6 +1,8 @@
 .topbar {
     margin: 0 auto;
     padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-around;
 
     .topbar__logocontainer {
         display: flex;
@@ -19,6 +21,18 @@
                 font-size: 45px;
                 color: #ccc;
             }
+        }
+    }
+
+    .topbar__user {
+        display: none;
+        @media #{$tablet} {
+            display: block;
+            align-self: flex-end;
+        }
+        
+        .topbar__useravatar {
+            width: 25px;
         }
     }
 }

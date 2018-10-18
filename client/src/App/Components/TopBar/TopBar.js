@@ -9,6 +9,9 @@ const TopBar = () => {
               <p>Shoppy</p>
             </div>
         </div>
+        <div className="topbar__user">
+          <img src="Images/user.svg" className="topbar__useravatar" alt="logo"/>
+        </div>
     </div>
   )
 }
