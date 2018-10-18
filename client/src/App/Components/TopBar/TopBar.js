@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from 'antd/lib/button';
 
 const TopBar = () => {
   return (
@@ -11,6 +12,8 @@ const TopBar = () => {
         </div>
         <div className="topbar__user">
           <img src="Images/user.svg" className="topbar__useravatar" alt="logo"/>
+          <p>Dashboard</p>
+          <Button type="primary" size="large">Post an item</Button>
         </div>
     </div>
   )
