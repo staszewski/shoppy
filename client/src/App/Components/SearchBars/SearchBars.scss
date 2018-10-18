@@ -1,0 +1,11 @@
+.searchbars {
+    display: flex;
+    padding-top: 30px;
+    flex-wrap:wrap;
+    #searchbars__item {
+        flex: 1 0 100%;
+    }
+    #searchbars__location {
+        flex: 0 0 60%;
+    }
+}
