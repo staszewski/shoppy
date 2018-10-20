@@ -1,8 +1,4 @@
-.searchbars {
-    // display: flex;
-    // padding-top: 30px;
-    // flex-wrap:wrap;
-    #searchbars__confirm {
-        height: initial;
-    }
+#searchbars__confirm {
+    display: flex;
+    justify-content: center;
 }

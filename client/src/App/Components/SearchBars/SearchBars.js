@@ -7,14 +7,14 @@ import { Row, Col } from 'antd';
 const SearchBars = () => {
   return (
     <Row>
-      <Col xs={24} lg={8} >
+      <Col xs={24} lg={10} >
         <Input placeholder="What are you looking for today?" id="searchbars__item"/>
       </Col>
-      <Col xs={10} lg={8}>
+      <Col xs={10} lg={10}>
         <Input placeholder="Location" id="searchbars__location"/>
       </Col>
       <Col xs={8} lg={4}>
-        <Button type="primary" id="searchbars__confirm">Post an item</Button>
+        <Button type="primary" block id="searchbars__confirm">Post an item</Button>
       </Col>
     </Row>
   )
