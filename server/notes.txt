@@ -1,2 +1,2 @@
 1. zrobić routy / router lepszy
-2. użyc gridu ant 
+2. grid do shoplistu
