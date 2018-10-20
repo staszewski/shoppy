@@ -1,6 +1,9 @@
 .mainpage {
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
+    @media #{$tablet} {
+        padding: 0 4.5rem;
+    }
 }
 @import '../Components/TopBar/TopBar.scss';
 @import '../Components/SearchBars/SearchBars.scss';

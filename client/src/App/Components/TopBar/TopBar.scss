@@ -1,48 +1,28 @@
-.topbar {
+.topbar__logocontainer {
     display: flex;
+    align-items: center;
     justify-content: center;
-
+    padding: 1rem 0;
     @media #{$tablet} {
-        justify-content: space-between;   
+        justify-content: initial;
     }
-    
-    .topbar__logocontainer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    
-        .topbar__logo {
-            width: 50px;
-            padding: 10px;
-        }
-
-        .topbar__logotext {
-            display: flex;
-            align-items: center;
-            p {
-                font-size: 45px;
-                color: #ccc;
-            }
-        }
+    img {
+        height: 50px;
+        width: 50px;
     }
+    p {
+        font-size: 30px;
+    }
+}
 
-    .topbar__user {
-        display: none;
-        @media #{$tablet} {
-            display: block;
-            align-self: flex-end;
-            display: flex;
-            align-items: center;
-            
-        }
-        p {
-            font-size: 1.2rem;
-            padding-right: 1rem; 
-        }
-        
-        .topbar__useravatar {
-            width: 70px;
-            padding: 1rem
-        }
+.topbar__user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem 0;
+    img {
+        height: 50px;
+        width: 50px;
+        padding: 5px;
     }
 }
