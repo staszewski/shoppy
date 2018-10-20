@@ -1,4 +1,23 @@
-#searchbars__confirm {
+
+#searchbars__item {
+    margin: 5px 0;
+}
+
+#searchbars__location {
+    margin: 5px 0;
+}
+
+#searchbars__search {
     display: flex;
     justify-content: center;
+    margin: 5px 0;
+}
+#searchbars__more {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.searchbars__buttoncontainer {
+    padding-left: 2px;
 }

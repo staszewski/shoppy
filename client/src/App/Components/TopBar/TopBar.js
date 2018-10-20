@@ -4,7 +4,7 @@ import Button from 'antd/lib/button';
 
 const TopBar = () => {
   return (
-    <div>
+    <div className="topbar">
       <Row>
         <Col xs={24} lg={12}>
         <div className="topbar__logocontainer">

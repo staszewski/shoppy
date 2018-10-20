@@ -1,7 +1,11 @@
 .topbar__logocontainer {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 1rem 0;
+    @media #{$tablet} {
+        justify-content: initial;
+    }
     img {
         height: 50px;
         width: 50px;
