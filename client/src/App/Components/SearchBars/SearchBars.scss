@@ -1,14 +1,8 @@
 .searchbars {
-    display: flex;
-    padding-top: 30px;
-    flex-wrap:wrap;
-    #searchbars__item {
-        flex: 1 0 100%;
-    }
-    #searchbars__location {
-        flex: 0 0 60%;
-    }
+    // display: flex;
+    // padding-top: 30px;
+    // flex-wrap:wrap;
     #searchbars__confirm {
-        flex: 1 0 40%;
+        height: initial;
     }
 }
