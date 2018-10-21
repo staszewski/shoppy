@@ -11,17 +11,12 @@ const SearchBars = ({ handleChange }) => {
         <Col xs={24} lg={10}>
           <Input placeholder="What are you looking for today?" id="searchbars__item" onChange={handleChange}/>
         </Col>
-        <Col xs={12} lg={10}>
+        <Col xs={17} lg={10}>
         <Input placeholder="Location" id="searchbars__location"/>
         </Col>
-        <Col xs={6} lg={2}>
-          <div className="searchbars__buttoncontainer">
-            <Button type="primary" block id="searchbars__search">Search</Button>
-          </div>
-        </Col>
-        <Col xs={6} lg={2}>
+        <Col xs={7} lg={4}>
         <div className="searchbars__buttoncontainer">        
-          <Button type="primary" block id="searchbars__more">More</Button>
+          <Button type="primary" block id="searchbars__more"><Icon type="setting" theme="outlined" />Settings</Button>
         </div>
         </Col>
       </Row>
@@ -29,4 +24,4 @@ const SearchBars = ({ handleChange }) => {
   )
 }
 
-export default SearchBars
+export default SearchBars;  

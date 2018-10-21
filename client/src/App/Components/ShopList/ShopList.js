@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Card } from 'antd';
-import SearchBars from './SearchBars'
+import { Row, Col, Card } from 'antd';
+import SearchBars from './SearchBars';
 
 export default class ShopList extends Component {
   constructor(props) {
@@ -25,47 +25,49 @@ export default class ShopList extends Component {
 
   
 	handleChange = (e) => {
-		// Variable to hold the original version of the list
     let currentList = [];
-		// Variable to hold the filtered list before putting into state
     let newList = [];
 		
-		// If the search bar isn't empty
     if (e.target.value !== "") {
-			// Assign the original list to currentList
       currentList = this.props.data;
 
       newList = currentList.filter(item => {
         return item.productName.toLowerCase().includes(e.target.value.toLowerCase());
       });
     } else {
-			// If the search bar is empty, set newList to original task list
       newList = this.props.data;
     }
-		// Set the filtered state based on what our rules added to newList
+
     this.setState({
       filtered: newList
     });
   }
 
   render() {
-    console.log(this.state.filtered)
     return (
       <div>
         <SearchBars handleChange={this.handleChange}/>
+        <Row>
         {
-          this.state.filtered.map((el => {
+          this.state.filtered.map(((el, index) => {
             return (
-              <Card
-              title="Card title"
-              extra={<a href="#">More</a>}
-              style={{ width: 300 }}
-            >
-              <p>{el.productName}</p>
-            </Card>
+                <Col xs={24} md={12} lg={8} xl={6} key={index}>
+                  <Card
+                    title={el.productName}
+                    extra={<a href="#">More</a>}
+                    style={{ width: `100%` }}
+                    cover={<img alt="example" src={el.img}
+                     />}
+                  > 
+                    <p>{el.description}</p>
+                    <br />
+                    <p>Price: {el.price}</p>
+                  </Card>
+                </Col>
             )
           }))
         }
+        </Row>
       </div>
     )
   }

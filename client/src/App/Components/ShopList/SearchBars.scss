@@ -1,23 +1,28 @@
+.searchbars {
+    padding-bottom: 3%;
+}
 
 #searchbars__item {
     margin: 5px 0;
+    // @media #{$desktop} {
+    //     padding: 1.2rem;
+    // } padding w obu inputach do ogarniecia razem z buttonem
 }
 
 #searchbars__location {
     margin: 5px 0;
+    // @media #{$desktop} {
+    //     padding: 1.2rem;
+    // }
 }
 
-#searchbars__search {
-    display: flex;
-    justify-content: center;
-    margin: 5px 0;
-}
 #searchbars__more {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 5px 0;
 }
 
 .searchbars__buttoncontainer {
-    padding-left: 2px;
+    padding-left: 2px; 
 }
