@@ -4,12 +4,12 @@ import Icon from 'antd/lib/icon';
 import Button from 'antd/lib/button';
 import { Row, Col } from 'antd';
 
-const SearchBars = () => {
+const SearchBars = ({ handleChange }) => {
   return (
     <div className="searchbars">
       <Row>
         <Col xs={24} lg={10}>
-          <Input placeholder="What are you looking for today?" id="searchbars__item"/>
+          <Input placeholder="What are you looking for today?" id="searchbars__item" onChange={handleChange}/>
         </Col>
         <Col xs={12} lg={10}>
         <Input placeholder="Location" id="searchbars__location"/>
