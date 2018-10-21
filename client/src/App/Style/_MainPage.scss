@@ -4,6 +4,9 @@
     @media #{$tablet} {
         padding: 0 4.5rem;
     }
+    @media #{$desktop} {
+        padding: 0 8.5rem;
+    }
 }
 @import '../Components/TopBar/TopBar.scss';
 @import '../Components/ShopList/SearchBars.scss';
