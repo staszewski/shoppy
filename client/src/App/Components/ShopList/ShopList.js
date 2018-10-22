@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { Row, Col, Card } from 'antd';
 import SearchBars from './SearchBars';
+import CategoriesBar from './CategoriesBar';
 
 export default class ShopList extends Component {
   constructor(props) {
     super(props)
   
     this.state = {
-       filtered: []
+       filtered: [],
+       filteredByCategory: []
     }
   }
 
@@ -43,10 +45,27 @@ export default class ShopList extends Component {
     });
   }
 
+  handleCategories = (e) => {
+    let currentList = [];
+    let newList = [];
+    currentList = this.props.data;
+
+    newList = currentList.filter(item => {
+        return item.product.category.toLowerCase().includes(e.currentTarget.textContent.toLowerCase());
+      });
+
+
+    this.setState({
+      filtered: newList
+    });
+  }
+  
+
   render() {
     return (
       <div>
         <SearchBars handleChange={this.handleChange}/>
+        <CategoriesBar handleCategories={this.handleCategories}/>
         <Row>
         {
           this.state.filtered.map(((el, index) => {
