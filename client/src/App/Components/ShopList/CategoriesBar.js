@@ -12,7 +12,7 @@ const CategoriesBar = ({ handleCategories }) => {
           </Col>
           <Col xs={0} md={12} lg={8} xl={6}>
           <div className="categoriesbar__categories">
-            <h2 onClick={handleCategories}><img src="Images/electronics.svg" className="categoriesbar__electronics" alt="logo"/>Toys</h2>
+            <h2 onClick={handleCategories}><img src="Images/toy.svg" className="categoriesbar__electronics" alt="logo"/>Toys</h2>
           </div>
           </Col>
           <Col xs={0} md={12} lg={8} xl={6}>
