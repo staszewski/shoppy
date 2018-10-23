@@ -51,9 +51,8 @@ export default class ShopList extends Component {
     currentList = this.props.data;
 
     newList = currentList.filter(item => {
-        return item.product.category.toLowerCase().includes(e.currentTarget.textContent.toLowerCase());
+        return item.product.category.toLowerCase() === e.currentTarget.textContent.toLowerCase();
       });
-
 
     this.setState({
       filtered: newList
