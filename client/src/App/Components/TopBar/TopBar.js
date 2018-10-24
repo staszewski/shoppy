@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import Button from 'antd/lib/button';
+import { Link } from 'react-router-dom';
 
 const TopBar = () => {
   return (
@@ -9,7 +10,7 @@ const TopBar = () => {
         <Col xs={24} md={14} lg={16} xl={20}>
         <div className="topbar__logocontainer">
             <img src="Images/store.svg" className="topbar__logo" alt="logo"/>
-            <p>Shoppy</p>
+            <Link to="/">Shoppy</Link>
         </div>
         </Col>
         <Col xs={0} md={10} lg={8} xl={4}>
