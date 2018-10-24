@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'antd';
+import { Link } from 'react-router-dom';
 
 const CategoriesBar = ({ handleCategories }) => {
   return (
@@ -22,7 +23,7 @@ const CategoriesBar = ({ handleCategories }) => {
           </Col>
           <Col xs={0} md={12} lg={8} xl={6}>
           <div className="categoriesbar__categories">
-            <h2 onClick={handleCategories}><img src="Images/electronics.svg" className="categoriesbar__electronics" alt="logo"/>Electronics</h2>
+            <Link to="/Electronics">Electronics</Link>
           </div>
           </Col>
       </Row>      

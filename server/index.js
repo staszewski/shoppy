@@ -7,12 +7,26 @@ const app = express();
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
 
+
+app.get('/:category', function (req, res) {
+	let find = data.filter((el => {
+	  return el.product.category == req.params.category
+	}))
+	res.json(find)
+	console.log('found category')
+  })
+  
+
 // An api endpoint that returns a short list of items
 app.get('/api/data', (req,res) => {
 	var questions = data
 	res.json(questions);
 	console.log('Sent list of items');
+	
 });
+
+
+
 
 // Handles any requests that don't match the ones above
 app.get('*', (req,res) =>{
