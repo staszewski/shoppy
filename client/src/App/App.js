@@ -1,8 +1,18 @@
 import React from 'react';
-import MainPage from './Pages/MainPage'
+import {
+    BrowserRouter as Router,
+    Route
+  } from 'react-router-dom';
+import MainPage from './Pages/MainPage';
+import ElectronicsPage from './Pages/ElectronicsPage';
 
 const App = () => (
-    <MainPage />
+    <Router>
+    <div className="container">
+      <Route exact path="/" component={MainPage} />
+      <Route path="/Electronics" component={ElectronicsPage} />
+    </div>
+  </Router>
 )
 
 export default App
