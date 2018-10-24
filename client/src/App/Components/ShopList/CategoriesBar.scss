@@ -6,14 +6,13 @@
 .categoriesbar__categories {
     display: flex;
     justify-content: center;
-    h2 {
-        max-width: 100px;
-        max-height: 100px;
+    a {
         display: flex;
         align-items: center;
+        justify-content: space-around;
     }
     img {
-        max-height: 80px;
-        max-width: 80px;
+        max-height: 50px;
+        max-width: 50px;
     }
 }
