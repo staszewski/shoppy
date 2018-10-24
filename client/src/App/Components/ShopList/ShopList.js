@@ -45,20 +45,7 @@ export default class ShopList extends Component {
     });
   }
 
-  handleCategories = (e) => {
-    let currentList = [];
-    let newList = [];
-    currentList = this.props.data;
-
-    newList = currentList.filter(item => {
-        return item.product.category.toLowerCase() === e.currentTarget.textContent.toLowerCase();
-      });
-
-    this.setState({
-      filtered: newList
-    });
-  }
-  
+ 
 
   render() {
     return (
@@ -74,8 +61,10 @@ export default class ShopList extends Component {
                     title={el.product.name}
                     extra={<a href="#">More</a>}
                     style={{ width: `100%` }}
-                    cover={<img alt="example" src={el.product.img}
-                     />}
+                    cover={<div className="shoplist__card">
+                    <img alt="example" src={el.product.img} />
+                    </div>
+                    }
                   > 
                     <p>{el.product.description}</p>
                     <br />

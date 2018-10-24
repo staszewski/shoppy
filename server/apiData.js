@@ -51,6 +51,48 @@ const data = [{
         description: "Lorem ipsum dolor sit amet.",
         price: "100EUR",
         img: "https://img01-olxpl.akamaized.net/img-olxpl/762384094_1_644x461_sony-playstation-2-fajny-zestaw-10-gier-przemysl_rev002.jpg",
+        category: "Electronics"
+    }
+},
+{
+    user: {
+        name: "Username2",
+        id: 2341121,
+        location: "Warsaw"
+    },
+    product: {
+        name: "Lego",
+        description: "Lorem ipsum dolor sit amet.",
+        price: "100EUR",
+        img: "https://8.allegroimg.com/s512/034ad3/5d14191a4bec9618676a784978c8",
+        category: "Toys"
+    }
+},
+{
+    user: {
+        name: "Username2",
+        id: 2341121,
+        location: "Warsaw"
+    },
+    product: {
+        name: "Lego",
+        description: "Lorem ipsum dolor sit amet.",
+        price: "100EUR",
+        img: "https://b.allegroimg.com/s512/0103c3/8fbc59644eddb0b279cfbcab080b",
+        category: "Toys"
+    }
+},
+{
+    user: {
+        name: "Username2",
+        id: 2341121,
+        location: "Warsaw"
+    },
+    product: {
+        name: "Lego",
+        description: "Lorem ipsum dolor sit amet.",
+        price: "100EUR",
+        img: "https://b.allegroimg.com/s512/0103c3/8fbc59644eddb0b279cfbcab080b",
         category: "Toys"
     }
 }
