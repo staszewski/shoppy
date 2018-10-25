@@ -18,7 +18,7 @@ const CategoriesBar = ({ handleCategories }) => {
           </Col>
           <Col xs={0} md={12} lg={8} xl={6}>
           <div className="categoriesbar__categories">
-            Link
+            <Link to="/Property"><img src="./Images/property.svg" />Property</Link>
           </div>
           </Col>
           <Col xs={0} md={12} lg={8} xl={6}>
