@@ -27,8 +27,8 @@ Shoppy itself is open source with a [public repository](https://github.com/Kamil
 
 3. **Install the dependencies and devDependencies and start the server.**
 
-```sh
-$ cd server
+```
+$ cd shoppyshop
 $ npm install 
 $ npm start
 $ cd client
