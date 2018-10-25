@@ -13,7 +13,7 @@ Shoppy uses a number of open source projects to work properly:
 * [axios] - for fetching data from api.
 
 
-Shoppy itself is open source with a [public repository](https://github.com/KamilStaszewski/shop-demo.git) on GitHub.
+Shoppy itself is open source with a [public repository](https://github.com/KamilStaszewski/shoppy.git) on GitHub.
 
 ### Installation
 
@@ -23,7 +23,7 @@ Shoppy itself is open source with a [public repository](https://github.com/Kamil
 
 2. **Clone the project**
 
-    `git clone https://github.com/KamilStaszewski/spacex-api-app.git`.
+    `git clone https://github.com/KamilStaszewski/shoppy.git`.
 
 3. **Install the dependencies and devDependencies and start the server.**
 
