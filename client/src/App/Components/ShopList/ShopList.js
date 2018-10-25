@@ -60,7 +60,6 @@ export default class ShopList extends Component {
                 <Col xs={24} md={12} lg={8} xl={6} key={el.user.id}>
                   <Card
                     title={el.product.name}
-                    extra={<a href="#">More</a>}
                     style={{ width: `100%` }}
                     cover={<div className="shoplist__card">
                     <img alt="" src={el.product.img} />
