@@ -109,6 +109,20 @@ const data = [{
         img: "https://static.dladealera.pl/data/900/069/1533241813.jpg",
         category: "Cars"
     }
+},
+{
+    user: {
+        name: "Username2",
+        id: 234112111,
+        location: "Warsaw"
+    },
+    product: {
+        name: "Property",
+        description: "Lorem ipsum dolor sit amet.",
+        price: "100EUR",
+        img: "https://www.saarman.com/wp-content/uploads/2016/06/Saarman-Wood-Mid-Rise-2.jpg",
+        category: "Property"
+    }
 }
 ]
 

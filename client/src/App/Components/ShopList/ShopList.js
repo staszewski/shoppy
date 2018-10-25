@@ -48,6 +48,7 @@ export default class ShopList extends Component {
  
 
   render() {
+    const { Meta } = Card;
     return (
       <div>
         <SearchBars handleChange={this.handleChange}/>
@@ -66,9 +67,10 @@ export default class ShopList extends Component {
                     </div>
                     }
                   > 
-                    <p>{el.product.description}</p>
-                    <br />
-                    <p>Price: {el.product.price}</p>
+                      <Meta
+                        title={el.product.price}
+                        description={el.product.description}
+                      />
                   </Card>
                 </Col>
             )
