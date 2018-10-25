@@ -1,29 +1,16 @@
 {
-  "name": "client",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "antd": "^3.10.1",
-    "axios": "^0.18.0",
-    "node-sass": "^4.9.3",
-    "react": "^16.4.1",
-    "react-burger-menu": "^2.5.4",
-    "react-dom": "^16.4.1",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.0.4",
-    "react-vis": "^1.11.2"
-  },
+  "name": "react-express-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Nicolas Burgess",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
-  "proxy": "http://localhost:5000",
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
