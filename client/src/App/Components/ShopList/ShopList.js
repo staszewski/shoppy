@@ -63,7 +63,7 @@ export default class ShopList extends Component {
                     extra={<a href="#">More</a>}
                     style={{ width: `100%` }}
                     cover={<div className="shoplist__card">
-                    <img alt="example" src={el.product.img} />
+                    <img alt="" src={el.product.img} />
                     </div>
                     }
                   > 

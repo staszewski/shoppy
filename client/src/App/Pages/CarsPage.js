@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import TopBar from '../Components/TopBar/TopBar';
 import ShopList from '../Components/ShopList/ShopList';
+import Footer from '../Components/Footer/Footer';
 
 export default class ElectronicsPage extends Component {
     constructor(props) {
@@ -28,7 +29,8 @@ export default class ElectronicsPage extends Component {
         return ( 
             <div className="mainpage">
                 <TopBar />
-                <ShopList data={this.state.data} fetched={this.state.fetched}/>            
+                <ShopList data={this.state.data} fetched={this.state.fetched}/>
+                <Footer />            
             </div>
 
         )
