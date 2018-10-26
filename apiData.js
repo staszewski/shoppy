@@ -76,9 +76,9 @@ const data = [{
     },
     product: {
         name: "Lego",
-        description: "Lorem ipsum dolor sit amet.",
-        price: "100EUR",
-        img: "https://b.allegroimg.com/s512/0103c3/8fbc59644eddb0b279cfbcab080b",
+        description: "Very used, please buy",
+        price: "5EUR/10kg",
+        img: "http://i.imgur.com/8SZCdaD.jpg",
         category: "Toys"
     }
 },
@@ -90,7 +90,7 @@ const data = [{
     },
     product: {
         name: "Lego",
-        description: "Lorem ipsum dolor sit amet.",
+        description: "New lego, used only one time😉",
         price: "100EUR",
         img: "https://b.allegroimg.com/s512/0103c3/8fbc59644eddb0b279cfbcab080b",
         category: "Toys"
@@ -119,7 +119,7 @@ const data = [{
     product: {
         name: "Property",
         description: "Lorem ipsum dolor sit amet.",
-        price: "100EUR",
+        price: "100 000 000 EUR",
         img: "https://www.saarman.com/wp-content/uploads/2016/06/Saarman-Wood-Mid-Rise-2.jpg",
         category: "Property"
     }
