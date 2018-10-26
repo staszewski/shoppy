@@ -35,6 +35,7 @@ $ cd client
 $ npm install 
 $ npm start
 ```
+Then go to localhost:3000 :)
 
 
 
@@ -50,6 +51,7 @@ My app is completely open source so you are free to make PR's. Everyone is welco
 
  - Tests
  - If there's a need would be great to implement redux
+ - Dashboard, registration form/login form
 
 ## Initial Machine Setup
 
