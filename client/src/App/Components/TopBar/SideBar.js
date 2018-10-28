@@ -8,16 +8,20 @@ const SideBar = (props) => {
       Home
     </a>
 
-    <a className="menu-item" href="/burgers">
-      Burgers
+    <a className="menu-item" href="/Toys">
+      Toys
     </a>
 
-    <a className="menu-item" href="/pizzas">
-      Pizzas
+    <a className="menu-item" href="/Cars">
+      Cars
     </a>
-
-    <a className="menu-item" href="/desserts">
-      Desserts
+    
+    <a className="menu-item" href="/Property">
+    Property
+    </a>
+    
+    <a className="menu-item" href="/Electronics">
+    Electronics
     </a>
   </Menu>
   )

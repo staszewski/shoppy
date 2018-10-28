@@ -5,6 +5,9 @@
     height: 30px;
     left: 36px;
     top: 36px;
+    @media #{$tablet} {
+        display: none;
+    }
   }
   
   /* Color/shape of burger icon bars */
@@ -28,6 +31,11 @@
     background: #373a47;
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
+    a {
+      color: #fff;
+      font-size: 30px;
+      padding: 10px;
+    }
   }
   
   /* Morph shape necessary with bubble or elastic */
