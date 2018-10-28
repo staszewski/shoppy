@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const TopBar = () => {
   return (
-    <div className="topbar">
+    <div className="topbar">    
       <Row>
         <Col xs={24} md={14} lg={16} xl={20}>
         <div className="topbar__logocontainer">

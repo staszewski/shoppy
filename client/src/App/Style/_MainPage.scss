@@ -1,4 +1,4 @@
-.mainpage {
+#mainpage {
     margin: 0 auto;
     padding: 0 1rem;
     @media #{$tablet} {
@@ -9,6 +9,7 @@
     }
 }
 @import '../Components/TopBar/TopBar.scss';
+@import '../Components/TopBar/SideBar.scss';
 @import '../Components/ShopList/SearchBars.scss';
 @import '../Components/ShopList/ShopList.scss';
 @import '../Components/ShopList/CategoriesBar.scss';
