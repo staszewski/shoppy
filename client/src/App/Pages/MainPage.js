@@ -3,6 +3,7 @@ import axios from 'axios';
 import TopBar from '../Components/TopBar/TopBar';
 import ShopList from '../Components/ShopList/ShopList';
 import Footer from '../Components/Footer/Footer';
+import SideBar from '../Components/TopBar/SideBar';
 
 export default class MainPage extends Component {
     constructor(props) {
@@ -26,12 +27,16 @@ export default class MainPage extends Component {
     }
 
     render() {
-        return ( 
-            <div className="mainpage">
-                <TopBar />
-                <ShopList data={this.state.data} fetched={this.state.fetched}/>
-                <Footer />            
+        return (
+            <div className="App">
+                <SideBar pageWrapId={"mainpage"} outerContainerId={"MainPage"} />
+                <div id="mainpage">
+                    <TopBar />
+                    <ShopList data={this.state.data} fetched={this.state.fetched}/>
+                    <Footer />            
+                </div>
             </div>
+
 
         )
     }

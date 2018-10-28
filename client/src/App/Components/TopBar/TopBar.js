@@ -2,7 +2,6 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import Button from 'antd/lib/button';
 import { Link } from 'react-router-dom';
-import SideBar from "./SideBar";
 
 const TopBar = () => {
   return (
