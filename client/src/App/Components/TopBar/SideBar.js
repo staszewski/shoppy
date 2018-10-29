@@ -1,30 +1,17 @@
 import React from "react";
 import { slide as Menu } from "react-burger-menu";
+import { Link } from "react-router-dom";
 
 const SideBar = (props) => {
   return (
     <Menu>
-    <a className="menu-item" href="/">
-      Home
-    </a>
-
-    <a className="menu-item" href="/Toys">
-      Toys
-    </a>
-
-    <a className="menu-item" href="/Cars">
-      Cars
-    </a>
-    
-    <a className="menu-item" href="/Property">
-    Property
-    </a>
-    
-    <a className="menu-item" href="/Electronics">
-    Electronics
-    </a>
+      <Link className="menu-item" to="/">Home</Link>
+      <Link className="menu-item" to="/Toys">Toys</Link>
+      <Link className="menu-item" to="/Cars">Cars</Link>
+      <Link className="menu-item" to="/Property">Property</Link>
+      <Link className="menu-item" to="/Electronics">Electronics</Link>
   </Menu>
   )
 }
 
-export default SideBar
+export default SideBar;

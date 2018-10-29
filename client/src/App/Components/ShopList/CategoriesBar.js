@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
 
-const CategoriesBar = ({ handleCategories }) => {
+const CategoriesBar = () => {
   return (
     <div className="categoriesbar">
       <Row>
