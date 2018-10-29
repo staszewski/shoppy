@@ -8,15 +8,19 @@ const SearchBars = ({ handleChange }) => {
   return (
     <div className="searchbars">
       <Row>
-        <Col xs={24} lg={10}>
-          <Input placeholder="What are you looking for today?" id="searchbars__item" onChange={handleChange}/>
+        <Col xs={24} lg={9}>
+          <Input size="large" placeholder="What are you looking for today?" id="searchbars__item" onChange={handleChange}/>
         </Col>
-        <Col xs={17} lg={10}>
-        <Input placeholder="Location" id="searchbars__location"/>
+        <Col lg={1}>
+        </Col>
+        <Col xs={17} lg={9}>
+        <Input size="large" placeholder="Location" id="searchbars__location"/>
+        </Col>
+        <Col lg={1}>
         </Col>
         <Col xs={7} lg={4}>
         <div className="searchbars__buttoncontainer">        
-          <Button type="primary" block id="searchbars__more"><Icon type="setting" theme="outlined" />Settings</Button>
+          <Button size="large" type="primary" block id="searchbars__more"><Icon type="setting" theme="outlined" />Settings</Button>
         </div>
         </Col>
       </Row>
