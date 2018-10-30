@@ -9,13 +9,13 @@ const TopBar = () => {
       <Row>
         <Col xs={24} md={14} lg={16} xl={20}>
         <div className="topbar__logocontainer">
-            <img src="Images/store.svg" className="topbar__logo" alt="logo"/>
+            <img src="../Images/store.svg" className="topbar__logo" alt="logo"/>
             <Link to="/">Shoppy</Link>
         </div>
         </Col>
         <Col xs={0} md={10} lg={8} xl={4}>
         <div className="topbar__user">
-          <img src="Images/user.svg" className="topbar__useravatar" alt="logo"/>
+          <img src="../Images/user.svg" className="topbar__useravatar" alt="logo"/>
           <p>Dashboard</p>
           <Button type="primary" ghost>Log in</Button>
         </div>

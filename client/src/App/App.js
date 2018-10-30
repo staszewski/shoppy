@@ -8,7 +8,7 @@ import ElectronicsPage from './Pages/ElectronicsPage';
 import ToysPage from './Pages/ToysPage';
 import CarsPage from './Pages/CarsPage';
 import PropertyPage from './Pages/PropertyPage';
-import ItemInfo from './Components/ItemInfo/ItemInfo';
+import ItemInfo from './Pages/ItemInfo';
 
 
 
