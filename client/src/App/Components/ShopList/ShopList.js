@@ -69,7 +69,6 @@ export default class ShopList extends Component {
                   > 
                       <Meta
                         title={el.product.price}
-                        description={el.product.description}
                       />
                   </Card>
                 </Col>

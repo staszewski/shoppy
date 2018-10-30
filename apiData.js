@@ -7,10 +7,10 @@ const data = [{
     product: {
         name: "Sony Playstation 3",
         id: 1,
-        description: "Lorem ipsum dolor sit amet.",
-        price: "100EUR",
-        condition: "used",
-        img: "https://img01-olxpl.akamaized.net/img-olxpl/762384094_1_644x461_sony-playstation-2-fajny-zestaw-10-gier-przemysl_rev002.jpg",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec lectus aliquam, rutrum ante vitae, facilisis velit. Quisque vel euismod nibh. Suspendisse ac felis a arcu vulputate sodales non et dui. Etiam tincidunt ullamcorper dui vitae euismod. Pellentesque id sollicitudin ex, non rhoncus sapien. Donec et leo mauris. Pellentesque interdum sapien eu semper gravida.",
+        price: "800EUR",
+        condition: "new",
+        img: "https://s12emagst.akamaized.net/products/4621/4620989/images/res_6ee011397d5a61498f6edac146ec9f12_full.jpg",
         category: "Electronics"
     }
 },
@@ -21,11 +21,12 @@ const data = [{
         location: "Warsaw"
     },
     product: {
-        name: "Sony Playstation 23",
+        name: "Old Playstation",
         id: 2,
-        description: "Lorem ipsum dolor sit amet.",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec lectus aliquam, rutrum ante vitae, facilisis velit. Quisque vel euismod nibh. Suspendisse ac felis a arcu vulputate sodales non et dui. Etiam tincidunt ullamcorper dui vitae euismod. Pellentesque id sollicitudin ex, non rhoncus sapien. Donec et leo mauris. Pellentesque interdum sapien eu semper gravida.",
         price: "100EUR",
-        img: "https://img01-olxpl.akamaized.net/img-olxpl/762384094_1_644x461_sony-playstation-2-fajny-zestaw-10-gier-przemysl_rev002.jpg",
+        condition: "used",
+        img: "https://images-na.ssl-images-amazon.com/images/I/61-QJMnLbXL._SL1100_.jpg",
         category: "Electronics"
     }
 },
@@ -37,9 +38,11 @@ const data = [{
     },
     product: {
         name: "konsola",
-        description: "Lorem ipsum dolor sit amet.",
-        price: "100EUR",
-        img: "https://img01-olxpl.akamaized.net/img-olxpl/762384094_1_644x461_sony-playstation-2-fajny-zestaw-10-gier-przemysl_rev002.jpg",
+        id: 3,
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec lectus aliquam, rutrum ante vitae, facilisis velit. Quisque vel euismod nibh. Suspendisse ac felis a arcu vulputate sodales non et dui. Etiam tincidunt ullamcorper dui vitae euismod. Pellentesque id sollicitudin ex, non rhoncus sapien. Donec et leo mauris. Pellentesque interdum sapien eu semper gravida.",
+        price: "600EUR",
+        condition: "new",
+        img: "https://images-na.ssl-images-amazon.com/images/I/81D%2BzAx%2BlyL._SL1500_.jpg",
         category: "Electronics"
     }
 },
@@ -53,7 +56,7 @@ const data = [{
         name: "Sony Playstation 12",
         description: "Lorem ipsum dolor sit amet.",
         price: "100EUR",
-        img: "https://img01-olxpl.akamaized.net/img-olxpl/762384094_1_644x461_sony-playstation-2-fajny-zestaw-10-gier-przemysl_rev002.jpg",
+        img: "https://images-na.ssl-images-amazon.com/images/I/81D%2BzAx%2BlyL._SL1500_.jpg",
         category: "Electronics"
     }
 },
