@@ -28,13 +28,13 @@ export default class More extends Component {
               </h1>     
             </div>
           </Col>
-          <Col lg={24}>
-                <Icon type="tool" theme="outlined" />Condition: {this.props.data[0].product.condition}
+          <Col lg={8}>
+                <Icon type="tool" theme="outlined" /> Condition: {this.props.data[0].product.condition}
           </Col>
-          <Col lg={24}>
+          <Col lg={8}>
                 <Icon type="tags" theme="outlined" /> Category: {this.props.data[0].product.category}
           </Col>
-          <Col lg={24}>
+          <Col lg={8}>
           <Icon type="home" theme="outlined" /> Category {this.props.data[0].user.location}
           </Col>
           <Col lg={24}>

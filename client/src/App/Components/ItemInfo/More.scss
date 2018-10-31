@@ -19,10 +19,11 @@
     .more__productname {
         font-size: 30px;
     }
-    .more__productdetails {
-        & * {
-            padding-right: 5px;
-        }
+}
+
+.more__productdetails {
+    & * {
+        padding-right: 5px;
     }
 }
 

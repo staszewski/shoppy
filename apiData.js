@@ -54,7 +54,7 @@ const data = [{
     },
     product: {
         name: "Sony Playstation 12",
-        description: "Lorem ipsum dolor sit amet.",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec lectus aliquam, rutrum ante vitae, facilisis velit. Quisque vel euismod nibh. Suspendisse ac felis a arcu vulputate sodales non et dui. Etiam tincidunt ullamcorper dui vitae euismod. Pellentesque id sollicitudin ex, non rhoncus sapien. Donec et leo mauris. Pellentesque interdum sapien eu semper gravida.",
         price: "100EUR",
         img: "https://images-na.ssl-images-amazon.com/images/I/81D%2BzAx%2BlyL._SL1500_.jpg",
         category: "Electronics"
@@ -68,8 +68,10 @@ const data = [{
     },
     product: {
         name: "Lego",
-        description: "Lorem ipsum dolor sit amet.",
-        price: "100EUR",
+        id: 4,
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec lectus aliquam, rutrum ante vitae, facilisis velit. Quisque vel euismod nibh. Suspendisse ac felis a arcu vulputate sodales non et dui. Etiam tincidunt ullamcorper dui vitae euismod. Pellentesque id sollicitudin ex, non rhoncus sapien. Donec et leo mauris. Pellentesque interdum sapien eu semper gravida.",
+        price: "50EUR",
+        condition: "new",
         img: "https://8.allegroimg.com/s512/034ad3/5d14191a4bec9618676a784978c8",
         category: "Toys"
     }
@@ -82,8 +84,10 @@ const data = [{
     },
     product: {
         name: "Lego",
-        description: "Very used, please buy",
+        id: 5,
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec lectus aliquam, rutrum ante vitae, facilisis velit. Quisque vel euismod nibh. Suspendisse ac felis a arcu vulputate sodales non et dui. Etiam tincidunt ullamcorper dui vitae euismod. Pellentesque id sollicitudin ex, non rhoncus sapien. Donec et leo mauris. Pellentesque interdum sapien eu semper gravida.",
         price: "5EUR/10kg",
+        condition: "used",
         img: "http://i.imgur.com/8SZCdaD.jpg",
         category: "Toys"
     }
@@ -96,8 +100,10 @@ const data = [{
     },
     product: {
         name: "Lego",
-        description: "New lego, used only one time😉",
+        id: 5,
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec lectus aliquam, rutrum ante vitae, facilisis velit. Quisque vel euismod nibh. Suspendisse ac felis a arcu vulputate sodales non et dui. Etiam tincidunt ullamcorper dui vitae euismod. Pellentesque id sollicitudin ex, non rhoncus sapien. Donec et leo mauris. Pellentesque interdum sapien eu semper gravida.",
         price: "100EUR",
+        condition: "almost new",
         img: "https://b.allegroimg.com/s512/0103c3/8fbc59644eddb0b279cfbcab080b",
         category: "Toys"
     }
@@ -109,9 +115,11 @@ const data = [{
         location: "Warsaw"
     },
     product: {
-        name: "Lego",
-        description: "Lorem ipsum dolor sit amet.",
-        price: "100EUR",
+        name: "Nice, yellow car, very fast",
+        id: 6,
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec lectus aliquam, rutrum ante vitae, facilisis velit. Quisque vel euismod nibh. Suspendisse ac felis a arcu vulputate sodales non et dui. Etiam tincidunt ullamcorper dui vitae euismod. Pellentesque id sollicitudin ex, non rhoncus sapien. Donec et leo mauris. Pellentesque interdum sapien eu semper gravida.",
+        price: "200 000 EUR",
+        condition: "used",
         img: "https://static.dladealera.pl/data/900/069/1533241813.jpg",
         category: "Cars"
     }
@@ -124,8 +132,10 @@ const data = [{
     },
     product: {
         name: "Property",
-        description: "Lorem ipsum dolor sit amet.",
+        id: 7,
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec lectus aliquam, rutrum ante vitae, facilisis velit. Quisque vel euismod nibh. Suspendisse ac felis a arcu vulputate sodales non et dui. Etiam tincidunt ullamcorper dui vitae euismod. Pellentesque id sollicitudin ex, non rhoncus sapien. Donec et leo mauris. Pellentesque interdum sapien eu semper gravida.",
         price: "100 000 000 EUR",
+        condition: "new",
         img: "https://www.saarman.com/wp-content/uploads/2016/06/Saarman-Wood-Mid-Rise-2.jpg",
         category: "Property"
     }
