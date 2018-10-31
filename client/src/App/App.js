@@ -17,10 +17,10 @@ const App = () => (
       <div className="container">
         <Route exact path="/" component={MainPage} />
         <Route path="/item/:id" component={ItemInfo} />
-        <Route path="/Electronics" component={ElectronicsPage} />
-        <Route path="/Toys" component={ToysPage} />
-        <Route path="/Cars" component={CarsPage} />
-        <Route path="/Property" component={PropertyPage} />
+        <Route path="/categories/Electronics" component={ElectronicsPage} />
+        <Route path="/categories/Toys" component={ToysPage} />
+        <Route path="/categories/Cars" component={CarsPage} />
+        <Route path="/categories/Property" component={PropertyPage} />
       </div>
     </Router>
 )

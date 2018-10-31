@@ -17,7 +17,7 @@ export default class ElectronicsPage extends Component {
     }
 
     componentDidMount = () => {
-        axios.get('/Electronics')
+        axios.get('/category/Electronics')
             .then(res => {
                 const data = res.data;
                 this.setState({

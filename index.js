@@ -8,16 +8,8 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'client/build')));
 app.disable('etag');
 
-function ignoreFavicon(req, res, next) {
-	if (req.originalUrl === '/favicon.ico') {
-	  res.status(204).json({nope: true});
-	} else {
-	  next();
-	}
-  }
-  app.use(ignoreFavicon);
 
-app.get('/:category', function (req, res) {
+app.get('/category/:category', function (req, res) {
 	let find = data.filter((el => {
 		return el.product.category == req.params.category
 	}));
