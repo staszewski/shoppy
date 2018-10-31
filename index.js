@@ -8,6 +8,14 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'client/build')));
 app.disable('etag');
 
+function ignoreFavicon(req, res, next) {
+	if (req.originalUrl === '/favicon.ico') {
+	  res.status(204).json({nope: true});
+	} else {
+	  next();
+	}
+  }
+  app.use(ignoreFavicon);
 
 app.get('/:category', function (req, res) {
 	let find = data.filter((el => {
