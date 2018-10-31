@@ -16,7 +16,7 @@ export default class ItemInfo extends Component {
     }
     
     componentDidMount = () => {
-        axios.get(`/item/${this.props.match.params.id}`)
+        axios.get(`/api/item/${this.props.match.params.id}`)
             .then(res => {
                 const data = res.data;
                 this.setState({
@@ -27,6 +27,7 @@ export default class ItemInfo extends Component {
     }
     
   render() {
+      console.log(this.props.match.params.id)
     return (
       <div className="App">
       <SideBar pageWrapId={"mainpage"} outerContainerId={"MainPage"} />

@@ -17,7 +17,7 @@ app.get('/:category', function (req, res) {
 	console.log('found category');
 });
 
-app.get('/item/:id', function (req, res) {
+app.get('/api/item/:id', function (req, res) {
 	let find = data.filter((el => {
 		return el.product.id == req.params.id
 	}))
