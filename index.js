@@ -6,7 +6,7 @@ const app = express();
 
 // Serve the static files from the React app
 // app.use(express.static(path.join(__dirname, 'client/build')));
-app.use('/public', express.static(path.join('/client/public/')));
+app.use('/public', express.static(path.join('/client/build/')));
 app.disable('etag');
 
 
