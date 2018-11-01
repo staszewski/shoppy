@@ -5,7 +5,7 @@ const data = require('./apiData');
 const app = express();
 
 // Serve the static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'client/public')));
 app.disable('etag');
 
 
@@ -22,7 +22,6 @@ app.get('/api/item/:id', function (req, res) {
 		return el.product.id == req.params.id
 	}))
 	res.json(find);
-	res.sendFile(path.join(__dirname + '/client/public/'));
 	console.log('found item')
 })
 
