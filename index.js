@@ -21,7 +21,8 @@ app.get('/api/item/:id', function (req, res) {
 	let find = data.filter((el => {
 		return el.product.id == req.params.id
 	}))
-	res.json(find)
+	res.json(find);
+	res.sendFile(path.join(__dirname + '/client/public/'));
 	console.log('found item')
 })
 
