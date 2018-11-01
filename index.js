@@ -5,11 +5,11 @@ const data = require('./apiData');
 const app = express();
 
 // Serve the static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join('client/build')));
 app.disable('etag');
 
 
-app.get('/:category', function (req, res) {
+app.get('/category/:category', function (req, res) {
 	let find = data.filter((el => {
 		return el.product.category == req.params.category
 	}));
@@ -17,11 +17,11 @@ app.get('/:category', function (req, res) {
 	console.log('found category');
 });
 
-app.get('/item/:id', function (req, res) {
+app.get('/api/item/:id', function (req, res) {
 	let find = data.filter((el => {
 		return el.product.id == req.params.id
 	}))
-	res.json(find)
+	res.json(find);
 	console.log('found item')
 })
 
@@ -38,7 +38,7 @@ app.get('/api/data', (req, res) => {
 
 // Handles any requests that don't match the ones above
 app.get('*', (req, res) => {
-	res.sendFile(path.join(__dirname + '/client/public/index.html'));
+	res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
 
 const port = process.env.PORT || 5000;

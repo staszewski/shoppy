@@ -17,7 +17,7 @@ export default class ToysPage extends Component {
     }
 
     componentDidMount = () => {
-        axios.get('/Toys')
+        axios.get('/category/Toys')
             .then(res => {
                 const data = res.data;
                 this.setState({
