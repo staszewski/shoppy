@@ -5,7 +5,8 @@ const data = require('./apiData');
 const app = express();
 
 // Serve the static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
+// app.use(express.static(path.join(__dirname, 'client/build')));
+app.use('/public', express.static(path.join('/client/public/')));
 app.disable('etag');
 
 
