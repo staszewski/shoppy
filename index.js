@@ -37,9 +37,9 @@ app.get('/api/data', (req, res) => {
 
 
 // Handles any requests that don't match the ones above
-// app.get('*', (req, res) => {
-// 	res.sendFile(path.join(__dirname + '/client/public/index.html'));
-// });
+app.get('*', (req, res) => {
+	res.sendFile(path.join(__dirname + '/client/public'));
+});
 
 const port = process.env.PORT || 5000;
 app.listen(port);
