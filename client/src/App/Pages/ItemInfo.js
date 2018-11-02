@@ -27,7 +27,6 @@ export default class ItemInfo extends Component {
     }
     
   render() {
-      console.log(this.props.match.params.id)
     return (
       <div className="App">
       <SideBar pageWrapId={"mainpage"} outerContainerId={"MainPage"} />
