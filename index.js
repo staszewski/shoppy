@@ -27,7 +27,7 @@ app.get('/api/item/:id', function (req, res) {
 
 app.get('/api/itemsearch/:search', function (req, res) {
 	let find = data.filter((el => {
-		return el.product.name == req.params.search;
+		return el.product.name.toLowerCase().includes(req.params.search.toLowerCase());
 	}))
 	res.json(find);
 	console.log('searching for item item')
