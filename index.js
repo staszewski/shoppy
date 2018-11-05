@@ -25,12 +25,20 @@ app.get('/api/item/:id', function (req, res) {
 	console.log('found item')
 })
 
+app.get('/api/itemsearch/:search', function (req, res) {
+	let find = data.filter((el => {
+		return el.product.name.toLowerCase().includes(req.params.search.toLowerCase());
+	}))
+	res.json(find);
+	console.log('searching for item item')
+})
+
+// app.get()
+
 // An api endpoint that returns a short list of items
 app.get('/api/data', (req, res) => {
-	var questions = data
-	res.json(questions);
+	res.json(data);
 	console.log('Sent list of items');
-
 });
 
 

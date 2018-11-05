@@ -19,43 +19,17 @@ export default class ShopList extends Component {
       })
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.setState({
-      filtered: nextProps.data
-    });
-  }
-
-  
-	handleChange = (e) => {
-    let currentList = [];
-    let newList = [];
-		
-    if (e.target.value !== "") {
-      currentList = this.props.data;
-
-      newList = currentList.filter(item => {
-        return item.product.name.toLowerCase().includes(e.target.value.toLowerCase());
-      });
-    } else {
-      newList = this.props.data;
-    }
-
-    this.setState({
-      filtered: newList
-    });
-  }
-
- 
-
   render() {
     const { Meta } = Card;
     return (
       <div>
-        <SearchBars handleChange={this.handleChange}/>
+        <SearchBars 
+          handleChange={this.props.handleChange}
+          handleSubmit={this.props.handleSubmit}/>
         <CategoriesBar handleCategories={this.handleCategories}/>
         <Row>
         {
-          this.state.filtered.map(((el, index) => {
+          this.props.data.map(((el, index) => {
             return (
                 <Col xs={24} md={12} lg={8} xl={6} key={el.user.id}>
                   <Card
