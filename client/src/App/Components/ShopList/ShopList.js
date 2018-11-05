@@ -19,34 +19,6 @@ export default class ShopList extends Component {
       })
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   this.setState({
-  //     filtered: nextProps.data
-  //   });
-  // }
-
-  
-	// handleChange = (e) => {
-  //   let currentList = [];
-  //   let newList = [];
-		
-  //   if (e.target.value !== "") {
-  //     currentList = this.props.data;
-
-  //     newList = currentList.filter(item => {
-  //       return item.product.name.toLowerCase().includes(e.target.value.toLowerCase());
-  //     });
-  //   } else {
-  //     newList = this.props.data;
-  //   }
-
-  //   this.setState({
-  //     filtered: newList
-  //   });
-  // }
-
- 
-
   render() {
     const { Meta } = Card;
     return (

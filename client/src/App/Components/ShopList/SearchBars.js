@@ -1,21 +1,31 @@
-import React from 'react';
-import { Form, Icon, Input, Button, Row, Col } from 'antd';
-const FormItem = Form.Item;
+import React, { Component } from 'react';
+import { Input, Button, Row, Col } from 'antd';
+
+
 
 const SearchBars = ({ handleChange, handleSubmit }) => {
   return (
     <div className="searchbars">
       <Row>
-          <Form layout="inline" >
-            <Col xs={24} lg={19}>
-              <FormItem>
-                <Input placeholder="Username" />
-              </FormItem>
-            </Col>
-          </Form>
+        <Col xs={24} lg={9}>
+          <Input size="large" placeholder="What are you looking for today?" id="searchbars__item" onChange={handleChange}/>
+        </Col>
+        <Col lg={1}>
+        </Col>
+        <Col xs={17} lg={9}>
+        <Input size="large" placeholder="Location" id="searchbars__location"/>
+        </Col>
+        <Col lg={1}>
+        </Col>
+        <Col xs={7} lg={4}>
+        <div className="searchbars__buttoncontainer">        
+          <Button size="large" type="primary" block id="searchbars__more" onClick={handleSubmit}>Search</Button>
+        </div>
+        </Col>
       </Row>
     </div>
   )
 }
 
-export default SearchBars;  
+export default SearchBars;
+ 
