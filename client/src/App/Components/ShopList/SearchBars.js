@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Input, Button, Row, Col } from 'antd';
 
 
-
-const SearchBars = ({ handleChange, handleSubmit }) => {
+const SearchBars = ({ handleChange, handleSubmit, searchValue }) => {
   return (
     <div className="searchbars">
       <Row>
@@ -19,7 +18,7 @@ const SearchBars = ({ handleChange, handleSubmit }) => {
         </Col>
         <Col xs={7} lg={4}>
         <div className="searchbars__buttoncontainer">        
-          <Button size="large" type="primary" block id="searchbars__more" onClick={handleSubmit}>Search</Button>
+          <Button size="large" type="primary" block id="searchbars__more" onClick={handleSubmit}><a href={`/itemsearch/${searchValue}`}>More</a></Button>
         </div>
         </Col>
       </Row>

@@ -45,7 +45,6 @@ export default class MainPage extends Component {
     }
 
     render() {
-        console.log(this.props)
         return (
             <div className="App">
                 <SideBar pageWrapId={"mainpage"} outerContainerId={"MainPage"} />
@@ -55,7 +54,8 @@ export default class MainPage extends Component {
                         data={this.state.data} 
                         fetched={this.state.fetched}
                         handleChange={this.handleChange}
-                        handleSubmit={this.handleSubmit}/>
+                        handleSubmit={this.handleSubmit}
+                        searchValue={this.state.searchValue}/>
                     <Footer />            
                 </div>
             </div>

@@ -9,6 +9,7 @@ import ToysPage from './Pages/ToysPage';
 import CarsPage from './Pages/CarsPage';
 import PropertyPage from './Pages/PropertyPage';
 import ItemInfo from './Pages/ItemInfo';
+import SearchPage from './Pages/SearchPage';
 
 
 
@@ -16,7 +17,7 @@ const App = () => (
     <Router>
       <div className="container">
         <Route exact path="/" component={MainPage} />
-        <Route path="/itemsearch/:search" component={MainPage} />
+        <Route path="/itemsearch/:search" component={SearchPage} />
         <Route path="/item/:id" component={ItemInfo} />
         <Route path="/categories/Electronics" component={ElectronicsPage} />
         <Route path="/categories/Toys" component={ToysPage} />
