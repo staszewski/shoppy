@@ -25,7 +25,9 @@ export default class ShopList extends Component {
       <div>
         <SearchBars 
           handleChange={this.props.handleChange}
-          handleSubmit={this.props.handleSubmit}/>
+          handleSubmit={this.props.handleSubmit}
+          searchValue={this.props.searchValue}
+          disable={this.props.disable}/>
         <CategoriesBar handleCategories={this.handleCategories}/>
         <Row>
         {

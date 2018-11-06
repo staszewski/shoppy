@@ -11,8 +11,9 @@ export default class MainPage extends Component {
 
         this.state = {
             data: [],
-            searchValue: null,
-            fetched: false
+            searchValue: '',
+            fetched: false,
+            disable: true
         }
     }
 
@@ -25,12 +26,25 @@ export default class MainPage extends Component {
                     fetched: true
                 })
             })
+    };
+
+    componentWillUnmount = () => {
+      this.setState({
+          fetched: false
+      })
     }
+    
 
     handleChange = (e) => {
         this.setState({
-            searchValue: e.target.value
+            searchValue: e.target.value,
+            disable: false
         })
+        if (this.state.searchValue.length === 1) {
+            this.setState({
+                disable: true
+            })
+        }
     }
 
     handleSubmit = () => {
@@ -45,7 +59,6 @@ export default class MainPage extends Component {
     }
 
     render() {
-        console.log(this.props)
         return (
             <div className="App">
                 <SideBar pageWrapId={"mainpage"} outerContainerId={"MainPage"} />
@@ -55,7 +68,9 @@ export default class MainPage extends Component {
                         data={this.state.data} 
                         fetched={this.state.fetched}
                         handleChange={this.handleChange}
-                        handleSubmit={this.handleSubmit}/>
+                        handleSubmit={this.handleSubmit}
+                        searchValue={this.state.searchValue}
+                        disable={this.state.disable}/>
                     <Footer />            
                 </div>
             </div>

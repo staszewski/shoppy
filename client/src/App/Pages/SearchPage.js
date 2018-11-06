@@ -5,8 +5,7 @@ import ShopList from '../Components/ShopList/ShopList';
 import Footer from '../Components/Footer/Footer';
 import SideBar from '../Components/TopBar/SideBar';
 
-
-export default class ElectronicsPage extends Component {
+export default class MainPage extends Component {
     constructor(props) {
         super(props)
 
@@ -19,14 +18,14 @@ export default class ElectronicsPage extends Component {
     }
 
     componentDidMount = () => {
-        axios.get('/category/Cars')
-            .then(res => {
-                const data = res.data;
-                this.setState({
-                    data,
-                    fetched: true
-                })
-            })
+      axios.get(`/api/itemsearch/${this.props.match.params.search}`)
+      .then(res => {
+          const data = res.data;
+          this.setState({
+              data,
+              fetched: true
+          })
+      })
     }
 
     handleChange = (e) => {
@@ -41,19 +40,8 @@ export default class ElectronicsPage extends Component {
         }
     }
 
-    handleSubmit = () => {
-        axios.get(`/api/itemsearch/${this.state.searchValue}`)
-        .then(res => {
-            const data = res.data;
-            this.setState({
-                data,
-                fetched: true
-            })
-        })
-    }
-
     render() {
-        return ( 
+        return (
             <div className="App">
                 <SideBar pageWrapId={"mainpage"} outerContainerId={"MainPage"} />
                 <div id="mainpage">
@@ -68,6 +56,7 @@ export default class ElectronicsPage extends Component {
                     <Footer />            
                 </div>
             </div>
+
 
         )
     }
