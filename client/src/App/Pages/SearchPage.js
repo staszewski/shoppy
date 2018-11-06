@@ -12,7 +12,8 @@ export default class MainPage extends Component {
         this.state = {
             data: [],
             searchValue: null,
-            fetched: false
+            fetched: false,
+            disable: true
         }
     }
 
@@ -29,8 +30,14 @@ export default class MainPage extends Component {
 
     handleChange = (e) => {
         this.setState({
-            searchValue: e.target.value
+            searchValue: e.target.value,
+            disable: false
         })
+        if (this.state.searchValue.length === 1) {
+            this.setState({
+                disable: true
+            })
+        }
     }
 
     render() {
@@ -44,7 +51,8 @@ export default class MainPage extends Component {
                         fetched={this.state.fetched}
                         handleChange={this.handleChange}
                         handleSubmit={this.handleSubmit}
-                        searchValue={this.state.searchValue}/>
+                        searchValue={this.state.searchValue}
+                        disable={this.state.disable}/>
                     <Footer />            
                 </div>
             </div>
