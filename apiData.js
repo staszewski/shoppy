@@ -141,6 +141,22 @@ const data = [{
         img: "https://www.saarman.com/wp-content/uploads/2016/06/Saarman-Wood-Mid-Rise-2.jpg",
         category: "Property"
     }
+},
+{
+    user: {
+        name: "Username2",
+        id: 23411211155,
+        location: "Warsaw"
+    },
+    product: {
+        name: "tata",
+        id: 7,
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec lectus aliquam, rutrum ante vitae, facilisis velit. Quisque vel euismod nibh. Suspendisse ac felis a arcu vulputate sodales non et dui. Etiam tincidunt ullamcorper dui vitae euismod. Pellentesque id sollicitudin ex, non rhoncus sapien. Donec et leo mauris. Pellentesque interdum sapien eu semper gravida.",
+        price: "500 000 000 EUR",
+        condition: "new",
+        img: "https://assets.archon.pl/images/products/m49ec22891f871/widok-1-projekt-dom-w-tocjach__289.jpg",
+        category: "Property"
+    }
 }
 ]
 
