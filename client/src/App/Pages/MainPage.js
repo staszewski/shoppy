@@ -40,11 +40,6 @@ export default class MainPage extends Component {
             searchValue: e.target.value,
             disable: false
         })
-        if (this.state.searchValue.length === 1) {
-            this.setState({
-                disable: true
-            })
-        }
     }
 
     handleSubmit = () => {

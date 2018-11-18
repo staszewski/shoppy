@@ -11,7 +11,7 @@ export default class MainPage extends Component {
 
         this.state = {
             data: [],
-            searchValue: null,
+            searchValue: '',
             fetched: false,
             disable: true
         }
@@ -33,11 +33,6 @@ export default class MainPage extends Component {
             searchValue: e.target.value,
             disable: false
         })
-        if (this.state.searchValue.length === 1) {
-            this.setState({
-                disable: true
-            })
-        }
     }
 
     render() {

@@ -9,7 +9,7 @@ app.use(express.static(path.join('client/build')));
 app.disable('etag');
 
 
-app.get('/category/:category', function (req, res) {
+app.get('/api/category/:category', function (req, res) {
 	let find = data.filter((el => {
 		return el.product.category == req.params.category
 	}));
