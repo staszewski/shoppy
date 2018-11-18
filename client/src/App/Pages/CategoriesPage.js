@@ -6,20 +6,20 @@ import Footer from '../Components/Footer/Footer';
 import SideBar from '../Components/TopBar/SideBar';
 
 
-export default class ElectronicsPage extends Component {
+export default class CategoriesPage extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
             data: [],
-            searchValue: null,
+            searchValue: '',
             fetched: false,
             disable: true
         }
     }
 
     componentDidMount = () => {
-        axios.get('/category/Cars')
+        axios.get(`/api/category/${this.props.match.params.category}`)
             .then(res => {
                 const data = res.data;
                 this.setState({
@@ -28,17 +28,26 @@ export default class ElectronicsPage extends Component {
                 })
             })
     }
+    componentDidUpdate = (prevProps, prevState) => {
+      if (prevProps.match.params.category !== this.props.match.params.category) {
+        axios.get(`/api/category/${this.props.match.params.category}`)
+        .then(res => {
+            const data = res.data;
+            this.setState({
+                data,
+                fetched: true
+            })
+        })
+      }
+    }
+    
+    
 
     handleChange = (e) => {
         this.setState({
             searchValue: e.target.value,
             disable: false
         })
-        if (this.state.searchValue.length === 1) {
-            this.setState({
-                disable: true
-            })
-        }
     }
 
     handleSubmit = () => {
