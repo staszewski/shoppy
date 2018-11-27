@@ -1,7 +1,9 @@
 const express = require('express');
 const path = require('path');
 const data = require('./apiData');
+const staticClass = require('./Data')
 
+const staticData = new staticClass;
 const app = express();
 
 // Serve the static files from the React app
@@ -51,5 +53,7 @@ app.get('*', (req, res) => {
 
 const port = process.env.PORT || 5000;
 app.listen(port);
+
+console.log(staticData.generateData())
 
 console.log('App is listening on port ' + port);
