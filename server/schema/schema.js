@@ -3,7 +3,9 @@ const _ = require('lodash');
 const {
   GraphQLObjectType,
   GraphQLString,
-  GraphQLSchema
+  GraphQLSchema,
+  GraphQLID,
+  GraphQLInt
 } = graphql;
 
 let items = [
@@ -14,13 +16,22 @@ let items = [
 const ItemType = new GraphQLObjectType({
   name: 'Item',
   fields: () => ({
-    id: {
-      type: GraphQLString
-    },
     name: {
       type: GraphQLString
     },
+    id: {
+      type: GraphQLString
+    },
+    description: {
+      type: GraphQLString
+    },
     price: {
+      type: GraphQLInt
+    },
+    currency: {
+      type: GraphQLString
+    },
+    category: {
       type: GraphQLString
     }
   })
