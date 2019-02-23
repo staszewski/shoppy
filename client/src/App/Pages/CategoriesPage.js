@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import { graphql } from 'react-apollo';
+import { getItemsQuery } from '../Queries/queries';
 import TopBar from '../Components/TopBar/TopBar';
 import ShopList from '../Components/ShopList/ShopList';
 import Footer from '../Components/Footer/Footer';
 import SideBar from '../Components/TopBar/SideBar';
 
 
-export default class CategoriesPage extends Component {
+class CategoriesPage extends Component {
     constructor(props) {
         super(props)
 
@@ -18,50 +19,10 @@ export default class CategoriesPage extends Component {
         }
     }
 
-    componentDidMount = () => {
-        axios.get(`/api/category/${this.props.match.params.category}`)
-            .then(res => {
-                const data = res.data;
-                this.setState({
-                    data,
-                    fetched: true
-                })
-            })
-    }
-    componentDidUpdate = (prevProps, prevState) => {
-      if (prevProps.match.params.category !== this.props.match.params.category) {
-        axios.get(`/api/category/${this.props.match.params.category}`)
-        .then(res => {
-            const data = res.data;
-            this.setState({
-                data,
-                fetched: true
-            })
-        })
-      }
-    }
     
-    
-
-    handleChange = (e) => {
-        this.setState({
-            searchValue: e.target.value,
-            disable: false
-        })
-    }
-
-    handleSubmit = () => {
-        axios.get(`/api/itemsearch/${this.state.searchValue}`)
-        .then(res => {
-            const data = res.data;
-            this.setState({
-                data,
-                fetched: true
-            })
-        })
-    }
 
     render() {
+        console.log(this.props)
         return ( 
             <div className="App">
                 <SideBar pageWrapId={"mainpage"} outerContainerId={"MainPage"} />
@@ -81,3 +42,5 @@ export default class CategoriesPage extends Component {
         )
     }
 }
+
+export default graphql(getItemsQuery)(CategoriesPage);

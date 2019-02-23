@@ -1,17 +1,14 @@
 const graphql = require('graphql');
 const _ = require('lodash');
+const ItemModel = require('../models/item');
 const {
   GraphQLObjectType,
   GraphQLString,
   GraphQLSchema,
   GraphQLID,
-  GraphQLInt
+  GraphQLInt,
+  GraphQLList
 } = graphql;
-
-let items = [
-  { name: 'Item1', id: '1', price: '300'},
-  { name: 'Item2', id: '2', price: '1300'}
-]
 
 const ItemType = new GraphQLObjectType({
   name: 'Item',
@@ -20,7 +17,7 @@ const ItemType = new GraphQLObjectType({
       type: GraphQLString
     },
     id: {
-      type: GraphQLString
+      type: GraphQLID
     },
     description: {
       type: GraphQLString
@@ -28,7 +25,7 @@ const ItemType = new GraphQLObjectType({
     price: {
       type: GraphQLInt
     },
-    currency: {
+    image: {
       type: GraphQLString
     },
     category: {
@@ -44,17 +41,64 @@ const RootQuery = new GraphQLObjectType({
       type: ItemType,
       args: {
         id: {
-          type: GraphQLString
+          type: GraphQLID
         }
       },
       resolve(parent, args) {
         // code to get data from db / other source
         return _.find(items, { id: args.id });
       }
+    },
+    items: {
+      type: new GraphQLList(ItemType),
+      resolve(parent, args) {
+        return ItemModel.find({})
+      }
+    }
+  }
+});
+
+const Mutation = new GraphQLObjectType({
+  name: 'Mutation',
+  fields: {
+    addItem: {
+      type: ItemType,
+      args: {
+        name: {
+          type: GraphQLString
+        },
+        id: {
+          type: GraphQLString
+        },
+        description: {
+          type: GraphQLString
+        },
+        price: {
+          type: GraphQLInt
+        },
+        image: {
+          type: GraphQLString
+        },
+        category: {
+          type: GraphQLString
+        }
+      },
+      resolve(parents, args) {
+        let item = new ItemModel({
+          name: args.name,
+          id: args.id,
+          description: args.description,
+          price: args.price,
+          image: args.image,
+          category: args.category
+        });
+        return item.save();
+      }
     }
   }
 });
 
 module.exports = new GraphQLSchema({
-  query: RootQuery
+  query: RootQuery,
+  mutation: Mutation
 });
