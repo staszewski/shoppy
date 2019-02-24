@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import { graphql } from 'react-apollo';
+import { getItemsQuery } from '../Queries/queries';
 import TopBar from '../Components/TopBar/TopBar';
 import ShopList from '../Components/ShopList/ShopList';
 import Footer from '../Components/Footer/Footer';
 import SideBar from '../Components/TopBar/SideBar';
 
-export default class MainPage extends Component {
+
+class MainPage extends Component {
     constructor(props) {
         super(props)
 
@@ -17,50 +19,18 @@ export default class MainPage extends Component {
         }
     }
 
-    componentDidMount = () => {
-        axios.get('/api/data')
-            .then(res => {
-                const data = res.data;
-                this.setState({
-                    data,
-                    fetched: true
-                })
-            })
-    };
-
-    componentWillUnmount = () => {
-      this.setState({
-          fetched: false
-      })
-    }
     
 
-    handleChange = (e) => {
-        this.setState({
-            searchValue: e.target.value,
-            disable: false
-        })
-    }
-
-    handleSubmit = () => {
-        axios.get(`/api/itemsearch/${this.state.searchValue}`)
-        .then(res => {
-            const data = res.data;
-            this.setState({
-                data,
-                fetched: true
-            })
-        })
-    }
-
     render() {
-        return (
+        console.log(this.props)
+        return ( 
             <div className="App">
                 <SideBar pageWrapId={"mainpage"} outerContainerId={"MainPage"} />
                 <div id="mainpage">
                     <TopBar />
                     <ShopList 
-                        data={this.state.data} 
+                        data={this.props.data}
+                        loading={this.props.data.loading} 
                         fetched={this.state.fetched}
                         handleChange={this.handleChange}
                         handleSubmit={this.handleSubmit}
@@ -70,7 +40,8 @@ export default class MainPage extends Component {
                 </div>
             </div>
 
-
         )
     }
 }
+
+export default graphql(getItemsQuery)(MainPage);

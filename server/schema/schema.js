@@ -46,7 +46,7 @@ const RootQuery = new GraphQLObjectType({
       },
       resolve(parent, args) {
         // code to get data from db / other source
-        return _.find(items, { id: args.id });
+        return ItemModel.findById(args.id);
       }
     },
     items: {
@@ -68,7 +68,7 @@ const Mutation = new GraphQLObjectType({
           type: GraphQLString
         },
         id: {
-          type: GraphQLString
+          type: GraphQLID
         },
         description: {
           type: GraphQLString
