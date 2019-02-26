@@ -1,6 +1,6 @@
 const graphql = require('graphql');
 const _ = require('lodash');
-const ItemModel = require('../models/item');
+const Item = require('../models/item');
 const {
   GraphQLObjectType,
   GraphQLString,
@@ -46,13 +46,13 @@ const RootQuery = new GraphQLObjectType({
       },
       resolve(parent, args) {
         // code to get data from db / other source
-        return ItemModel.findById(args.id);
+        return Item.findById(args.id);
       }
     },
     items: {
       type: new GraphQLList(ItemType),
       resolve(parent, args) {
-        return ItemModel.find({})
+        return Item.find({})
       }
     }
   }
@@ -84,7 +84,7 @@ const Mutation = new GraphQLObjectType({
         }
       },
       resolve(parents, args) {
-        let item = new ItemModel({
+        let item = new Item({
           name: args.name,
           id: args.id,
           description: args.description,
